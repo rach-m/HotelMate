@@ -1,0 +1,15 @@
+
+    <% include ../partials/header %>
+    <div class="page-container">
+      <h2 class="page-title">All Reservations</h2>
+      <% guests.forEach(guest => { %>
+        <div class="guest-wrapper">
+     <h3> <%= guest.lname %>,  <%= guest.fname %></h3>
+     <p><%= guest.check_in %>-<%= guest.check_out %></p>
+          <div class="quote-actions">
+            <a href="/guests/<%=guest.guest_id%>">Guest Info</a>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <% include ../partials/footer %>

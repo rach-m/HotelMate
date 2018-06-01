@@ -1,4 +1,10 @@
 body {
-  background-color: #efefef;
   font-family: "Roboto", sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+
+li{
+  text-decoration: none;
+  list-style: none;
 }

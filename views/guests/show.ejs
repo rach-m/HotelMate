@@ -1,0 +1,17 @@
+    <% include ../partials/header %>
+    <h1><%=guest.fname%> <%=guest.lname%></h1>
+    <h2>Check In: <%=guest.check_in%></h2>
+    <h2>Check Out: <%=guest.check_out%></h2>
+    <h2>Room: <%=reservation.room_number%></h2>
+<br>
+    <p>Address: <%=guest.address%></p>
+    <p>Phone: <%=guest.phone%></p>
+    <p>Email: <%=guest.email%></p>
+    <p>Credt Card #: <%=guest.credit_card%></p>
+    <%if (reservation.late_checkout === 'Y'){%>
+   <p> Check Out Time: 12:00 PM </p>
+<%}%>
+<%if(reservation.late_checkout === 'N'){%>
+<p>Check Out Time: 11:00 AM</p>
+<%}%>
+    <% include ../partials/footer %>

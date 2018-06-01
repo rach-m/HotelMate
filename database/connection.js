@@ -1,4 +1,5 @@
 const monitor = require("pg-monitor");
+const promise = require("bluebird");
 
 let initOptions = {};
 
