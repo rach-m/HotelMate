@@ -7,7 +7,10 @@ Guest.all = () => {
 };
 
 Guest.find = id => {
-  return db.one("SELECT * FROM guests WHERE guest_id = ${id}", { id : id });
+  return db.one(
+    "SELECT * FROM guests && SELECT TO_CHAR(NOW() :: DATE, 'dd/mm/yyyy') WHERE guest_id = ${id}",
+    { id: id }
+  );
 };
 
 module.exports = Guest;

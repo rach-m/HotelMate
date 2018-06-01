@@ -4,8 +4,14 @@ const Reservation = require("./models/reservation");
 const Guest = require("./models/guest");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
-
 const app = express();
+app.set("view engine", "ejs");
+var moment = require("moment");
+exports.index = function(req, res) {
+  // send moment to your ejs
+  res.render("guests/index", { moment: moment });
+};
+
 
 // Allow override of HTTP methods based on the query string ?_method=DELETE
 app.use(methodOverride("_method"));
@@ -20,20 +26,24 @@ const PORT = process.env.PORT || 3000;
 // Serve any files in the public folder at the "/public" route.
 app.use("/public", express.static("public"));
 
+
 // Set the folder for where our views are.
 // app.set("views", path.join(__dirname, "views"));
 
 // Tell Express that we use EJS in our views.
-app.set("view engine", "ejs");
+
 
 app.get("/", (request, response) => {
   response.render("homepage");
 });
 
+app.get('/guests/new', (request,response) => {
+  response.render('guests/new');
+});
 
 
 app.get("/guests", (request, response) => {
-   Guest.all().then(guests=> {
+  Guest.all().then(guests=> {
     response.render("guests/index", { guests:guests});
   });
 });

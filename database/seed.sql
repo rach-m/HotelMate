@@ -3,13 +3,16 @@
 DELETE FROM guests;
 
 INSERT INTO guests
-(fname, lname, email, address, phone, credit_card, check_in, check_out)
+(fname, lname, email, address, city, state, zip, phone, credit_card, check_in, check_out)
 VALUES
 (
 'Nannie',
 'Grady',
 'nanniegrady@gmail.com',
-'4096 Bert Haven East Lea, ID 91745',
+'4096 Bert Haven',
+'East Lea',
+'ID',
+91745,
 '357-613-6525',
 7530972164832175,
 TO_DATE('06-28-2018', 'MM DD YY'),
@@ -17,13 +20,16 @@ TO_DATE('07-05-2018', 'MM DD YY')
 );
 
 INSERT INTO guests
-  (fname, lname, email, address, phone, credit_card, check_in, check_out)
+  (fname, lname, email, address, city, state, zip, phone, credit_card, check_in, check_out)
 VALUES
   (
 'Estevan',
 'Wintheiser',
 'ewin@gmail.com',
-'2975 Braun Corners Port Mozelleville, CT 19407',
+'2975 Braun Corners',
+'Port Mozelleville',
+'CT',
+19407,
 '309-636-6638',
 6857493029875322,
 TO_DATE
@@ -34,13 +40,16 @@ TO_DATE
 
 
 INSERT INTO guests
-  (fname, lname, email, address, phone, credit_card, check_in, check_out)
+  (fname, lname, email, address, city, state, zip, phone, credit_card, check_in, check_out)
 VALUES
   (
 'Wade',
 'Bayer',
 'wadebayer@gmail.com',
-'7942 Metz Point Medhurstbury, NM 89291',
+'7942 Metz Point',
+ 'Medhurstbury',
+ 'NM',
+ 89291,
 '458-298-8888',
 7891726450982470,
 TO_DATE

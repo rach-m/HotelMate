@@ -8,3 +8,7 @@ li{
   text-decoration: none;
   list-style: none;
 }
+
+#dropdown{
+  max-height: 5px;
+}
