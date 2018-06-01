@@ -1,0 +1,24 @@
+{
+  "name": "express-boilerplage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ryan F. Salerno <ryan.salerno@generalassemb.ly>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "method-override": "^2.3.10",
+    "pg-monitor": "^1.0.0",
+    "pg-promise": "^8.4.4"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "This is an example of a \"gold standard\" application for Unit 2 using Express.",
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/rach676/HotelMate"
+  }
+}
