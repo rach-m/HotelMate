@@ -2,14 +2,15 @@
     <% include ../partials/header %>
     <div class="page-container">
       <h2 class="page-title">All Reservations</h2>
-      <% guests.forEach(guest => { %>
+     <% for (var i = 0; i< guests.length; i++){%>
         <div class="guest-wrapper">
-     <h3> <%= guest.lname %>,  <%= guest.fname %></h3>
-     <p><%= guest.check_in %>-<%= guest.check_out %></p>
+     <h3> <%= guests[i].lname %>,  <%= guests[i].fname %></h3>
+     <p><%= checkIn[i] %> - <%= checkOut[i] %></p>
+
           <div class="quote-actions">
-            <a href="/guests/<%=guest.guest_id%>"> Info</a>
+            <a href="/guests/<%=guests[i].guest_id%>"> Info</a>
           </div>
         </div>
-      <% }) %>
+             <%}%>
     </div>
     <% include ../partials/footer %>

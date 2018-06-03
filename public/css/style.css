@@ -7,8 +7,24 @@ body {
 li{
   text-decoration: none;
   list-style: none;
+  display: inline;
+}
+
+a{
+  display: inline;
 }
 
 #dropdown{
-  max-height: 5px;
+  max-height: 15%
+}
+
+.my-modal {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1000ms linear;
+}
+
+.my-modal.modal-active {
+    visibility: visible;
+    opacity: 1;
 }
