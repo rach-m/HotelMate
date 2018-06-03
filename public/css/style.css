@@ -12,8 +12,6 @@ body {
   overflow: visible;
 }
 
-
-
 li {
   text-decoration: none;
   list-style: none;
@@ -59,7 +57,7 @@ nav {
   background: seagreen;
   height: 150px;
   width: 100%;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
   align-content: center;
   justify-content: space-between;
   padding: 0 5%;
@@ -68,23 +66,21 @@ nav {
 ul {
   display: flex;
   margin: 4% 0;
-
 }
 
-a{
- font-family: Roboto;
+a {
+  font-family: Roboto;
   color: black;
 }
 
-a:hover{
- text-decoration: none;
+a:hover {
+  text-decoration: none;
   color: seagreen;
 }
 
-.guest-actions{
-
+.guest-actions {
   padding-bottom: 3%;
-   flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 h1 {
@@ -98,85 +94,186 @@ footer {
   background: black;
   color: seagreen;
   width: 100%;
-  height: 125px;
-
+  height: 100px;
 }
 
-h2{
+h2 {
   font-family: "Comfortaa", cursive;
-  padding-bottom: 3%;
+  padding-bottom: 1%;
   font-size: 35px;
 }
 
-h3{
+h3 {
   font-family: "Comfortaa", cursive;
   font-size: 25px;
 }
-p{
-   font-family: Roboto;
-  font-size: 18px;
-}
-
-footer>p{
+p {
   font-family: Roboto;
   font-size: 18px;
-  padding-top: 3%;
+}
+
+footer > p {
+  font-family: Roboto;
+  font-size: 18px;
+  padding-top: 2%;
+}
+
+.guest-wrapper {
+  padding-bottom: 5%;
+}
+
+input {
+  border: 1px seagreen solid;
+  color: seagreen;
+}
+
+label {
+  color: seagreen;
+  font-family: Roboto;
+  align-content: flex-start;
+  margin-right: 2%;
+  font-size: 20px;
+}
+
+select {
+  border: 1px seagreen solid;
+}
+
+[type="submit"] {
+  margin-top: 1%;
+  color: whitesmoke;
+  background: seagreen;
+border: none;
+  margin-bottom: 3%;
+}
+
+.btn-primary {
+  text-align: center;
+  background: seagreen;
+  margin: auto;
+  border: none;
+  /* margin-bottom: 5%; */
+  display: inline;
+  font-size: 20px;
+  padding: 4% 13%;
+  font-weight: 400;
+  /* font-size: 20px; */
+  border-radius: 0.25rem;
 
 }
 
-.guest-wrapper{
- padding-bottom: 5%;
+#button-wrapper > ul > li:nth-child(1){
+  margin: 0 -7%;
+}
+#button-wrapper > ul > li:nth-child(2){
+  margin: 0;
+  /* padding: 2% 1%; */
 }
 
-@media screen and (max-width: 800px){
+#button-wrapper {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
 
-  nav{
+button>a{
+  color: white;
+}
+
+button>a:hover{
+  color: white;
+  text-decoration: none;
+}
+@media screen and (max-width: 900px) {
+  nav {
     height: 100px;
   }
-  #logo{
+  #logo {
     font-size: 25px;
     padding-top: 4%;
   }
 
-  li{
+  #logo:hover {
+    font-size: 25px;
+    padding-top: 4%;
+  }
+
+  li {
     font-size: 15px;
     padding-top: 8.5%;
   }
 
-  h3{
+  li:hover {
+    font-size: 15px;
+    padding-top: 8.5%;
+  }
+
+  h3 {
     font-size: 20px;
   }
-  P{
+  p {
     font-size: 15px;
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 600px) {
+  nav {
+    height: 100px;
+  }
+  #logo {
+    font-size: 25px;
+    padding-top: 5%;
+  }
 
-  nav{
-    height: 75px;
+  #logo:hover {
+    font-size: 25px;
+    padding-top: 5%;
+  }
+
+  li {
+    font-size: 15px;
+    padding-top: 8.5%;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  *:after {
+    box-sizing: none;
+    height: 100%;
     width: 100%;
   }
-  #logo{
-    font-size: 18px;
-    padding-top: 4%;
+
+  nav {
+    height: 75px;
+    width: 125%;
+    box-sizing: content-box;
+  }
+  #logo {
+    font-size: 20px;
+    padding-top: 6%;
   }
 
-  li{
-    font-size: 10px;
-    padding-top: 8.5%;
-    ma
+  ul {
+    visibility: hidden;
   }
 
-  h3{
+  h3 {
     font-size: 20px;
   }
 
-  footer{
-       height: 50px;
+  footer {
+    height: 50px;
+    box-sizing: content-box;
+    width: 125%;
   }
-  footer>p{
-
+  footer > p {
     font-size: 10px;
     padding-top: 5%;
   }

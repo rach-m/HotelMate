@@ -71,11 +71,32 @@ button:hover{
   background: seagreen;
 }
 
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 900px){
+    h1{
+    font-size: 35px;
+  }
+p{
+  font-size: 25px;
+}
+} */
+
+@media screen and (max-width: 900px){
   h1{
     font-size: 35px;
   }
 p{
   font-size: 25px;
+}
+.smoke_box{
+  margin-top: 25%;
+}
+}
+
+@media screen and (max-width: 400px){
+  h1{
+    font-size: 25px;
+  }
+p{
+  font-size: 15px;
 }
 }

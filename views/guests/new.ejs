@@ -5,6 +5,7 @@
     "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC",
     "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"]%>
 <form action = '/guests/new' method = 'POST'>
+<div class = 'form-group'>
      <label>First Name: </label><input name = 'fname' type = 'text' required></input><br>
      <label>Last Name: </label><input name = 'lname' type = 'text' required></input><br>
      <label>Email: </label><input name = 'email' type = 'text' required></input><br>
@@ -25,7 +26,8 @@
     <option value = 'Y'>Yes</option>
     <option value = 'N'>No</option>
 </select><br>
-     <input type = 'submit' value = 'Create New Reservation '>
+     <input id = '#button' type = 'submit' value = 'Create New Reservation '>
+     </div>
 </form>
 
 
