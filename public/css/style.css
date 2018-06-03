@@ -143,7 +143,7 @@ select {
   margin-top: 1%;
   color: whitesmoke;
   background: seagreen;
-border: none;
+  border: none;
   margin-bottom: 3%;
 }
 
@@ -159,13 +159,12 @@ border: none;
   font-weight: 400;
   /* font-size: 20px; */
   border-radius: 0.25rem;
-
 }
 
-#button-wrapper > ul > li:nth-child(1){
+#button-wrapper > ul > li:nth-child(1) {
   margin: 0 -7%;
 }
-#button-wrapper > ul > li:nth-child(2){
+#button-wrapper > ul > li:nth-child(2) {
   margin: 0;
   /* padding: 2% 1%; */
 }
@@ -176,14 +175,18 @@ border: none;
   text-align: center;
 }
 
-button>a{
+button > a {
   color: white;
 }
 
-button>a:hover{
+button > a:hover {
   color: white;
   text-decoration: none;
 }
+  nav>ul{
+    margin-right: 85px;
+    margin-top: 55px;
+  }
 @media screen and (max-width: 900px) {
   nav {
     height: 100px;
@@ -200,7 +203,7 @@ button>a:hover{
 
   li {
     font-size: 15px;
-    padding-top: 8.5%;
+    padding-top: 10px;
   }
 
   li:hover {
@@ -214,11 +217,20 @@ button>a:hover{
   p {
     font-size: 15px;
   }
+    nav>ul{
+    margin-right: 75px;
+    margin-top: 4.5%;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  body{
+    max-width: 100%;
+  }
+
   nav {
     height: 100px;
+    width: 100%;
   }
   #logo {
     font-size: 25px;
@@ -232,8 +244,10 @@ button>a:hover{
 
   li {
     font-size: 15px;
-    padding-top: 8.5%;
+    padding-top: 9.5%;
   }
+
+
 
   h3 {
     font-size: 20px;
@@ -241,27 +255,69 @@ button>a:hover{
   p {
     font-size: 15px;
   }
+     nav>ul{
+    margin-right: 75px;
+    /* margin-top: 4.5%; */
+  }
 }
 
-@media screen and (max-width: 400px) {
-  *:after {
-    box-sizing: none;
-    height: 100%;
-    width: 100%;
+@media screen and (max-width: 450px) {
+body{
+  text-align: center;
+}
+.guest-wrapper{
+  text-align: center;
+  padding: 0 -25px;
+}
+h2{
+font-size: 25px;
+padding-bottom: 25px;
+  }
+
+  h3{
+    font-size: 15px;
+  }
+
+  p{
+    font-size:12px;
+  }
+
+  a{
+    font-size: 10px;
   }
 
   nav {
     height: 75px;
-    width: 125%;
+    width: 85%;
     box-sizing: content-box;
   }
   #logo {
     font-size: 20px;
     padding-top: 6%;
   }
+   nav>ul{
+    margin-right: 30px;
+    }
 
-  ul {
-    visibility: hidden;
+  li{
+    font-size :7px;
+    margin-left: 25px;
+
+  }
+
+  body > nav > ul {
+     /* margin-right: 45%; */
+     /* padding-right: 15px; */
+    margin-top: 9%;
+  }
+
+  li:hover{
+    font-size :10px;
+  }
+
+  nav>ul{
+    margin-right: 45px;
+    margin-top: 6.5%;
   }
 
   h3 {
@@ -271,10 +327,36 @@ button>a:hover{
   footer {
     height: 50px;
     box-sizing: content-box;
-    width: 125%;
+    width: 100%;
+
   }
   footer > p {
     font-size: 10px;
     padding-top: 5%;
   }
+  .btn-primary {
+  text-align: center;
+  background: seagreen;
+  margin: auto;
+  border: none;
+  /* margin-bottom: 5%; */
+  display: inline;
+  font-size: 10px;
+  font-weight: 400;
+  /* font-size: 20px; */
+  border-radius: 0.25rem;
+}
+#button-wrapper > ul > li:nth-child(1) {
+  margin: 0 -35%;
+}
+#button-wrapper > ul > li:nth-child(2) {
+  margin: 0;
+  /* padding: 2% 1%; */
+}
+
+#button-wrapper {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
 }
