@@ -1,0 +1,81 @@
+/* html {
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+body{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* align-content: center; */
+  /* height: 100%; */
+    background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  /* background-position: center; */
+}
+
+
+h1 {
+  align-content: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  font-size: 75px;
+  padding-top: 1%;
+}
+
+p{
+
+  color: whitesmoke;
+  font-size: 45px;
+  font-family: Roboto;
+  font-weight: 100;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.smoke_box{
+  background: rgba(0, 0, 0, .6);
+  width: 55%;
+  justify-content: center;
+  margin: 0 auto;
+  align-content: center;
+  margin-top: 9%;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+button{
+  border: none;
+  border-radius: 5px;
+  margin: 15px;
+  font-family: Roboto;
+  font-size: 15px;
+  padding: 1%;
+}
+button:hover{
+  border: none;
+  border-radius: 5px;
+  margin: 15px;
+  font-family: Roboto;
+  font-size: 15px;
+  padding: 1%;
+  background: seagreen;
+}
+
+@media screen and (max-width: 600px){
+  h1{
+    font-size: 35px;
+  }
+p{
+  font-size: 25px;
+}
+}
