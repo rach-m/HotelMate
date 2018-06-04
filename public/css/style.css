@@ -129,6 +129,7 @@ label {
 select {
   border: 1px seagreen solid;
   font-family: "Comfortaa", cursive;
+  width: 70px;
 }
 
 [type="submit"] {
@@ -156,4 +157,10 @@ button > a:hover {
   nav>ul{
     margin-right: 85px;
     margin-top: 55px;
+  }
+
+  @media screen and (min-width: 450px){
+    label{
+      font-size: 10px;
+    }
   }
