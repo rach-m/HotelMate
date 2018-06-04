@@ -1,1 +1,5 @@
 node_modules/
+
+secret = {
+  api_key: 'exqWFcauRUwp17tTBDzh6OETfeNEEhqr'
+}

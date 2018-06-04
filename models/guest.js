@@ -41,4 +41,8 @@ Guest.delete = id => {
   return db.result("DELETE FROM guests WHERE guest_id = ${id}", { id: id });
 }
 
+// Guest.search = searchedGuest => {
+//   return db.one('SELECT guest_id FROM guests where lname = ${lname} AND email = ${email}', {lname:lname, email:email })
+// }
+
 module.exports = Guest;

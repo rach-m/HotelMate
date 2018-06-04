@@ -1,6 +1,6 @@
-CREATE DATABASE hotelmate_db;
+-- CREATE DATABASE hotelmate_db;
 
-\c hotelmate_db
+-- \c hotelmate_db
 
 DROP TABLE IF EXISTS reservations;
 DROP TABLE IF EXISTS guests;
