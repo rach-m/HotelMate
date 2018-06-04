@@ -159,8 +159,21 @@ button > a:hover {
     margin-top: 55px;
   }
 
-  @media screen and (min-width: 450px){
+  @media screen and (max-width: 500px){
     label{
-      font-size: 10px;
+      font-size: 12px;
+        margin-bottom: 5px;;
+    }
+    input{
+      font-size: 12px;
+
+    }
+    select{
+font-size: 12px
+
+    }
+
+    footer>p{
+      font-size: 15px;
     }
   }
