@@ -64,7 +64,8 @@ button{
   font-family: Roboto;
   font-size: 15px;
   padding: 1%;
-  /* transition: all 1.5s ease-in; */
+  background-color: whitesmoke;
+
   padding: 3%;
 }
 button:hover{

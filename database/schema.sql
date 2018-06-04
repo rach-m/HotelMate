@@ -1,6 +1,6 @@
--- CREATE DATABASE hotelmate_db;
+CREATE DATABASE hotelmate_db;
 
--- \c hotelmate_db
+\c hotelmate_db
 
 DROP TABLE IF EXISTS reservations;
 DROP TABLE IF EXISTS guests;
@@ -8,23 +8,23 @@ DROP TABLE IF EXISTS guests;
 
 CREATE TABLE guests (
   guest_id SERIAL PRIMARY KEY,
-  fname TEXT,
-  lname TEXT,
-  email TEXT,
-  address TEXT,
-  city TEXT,
-  state TEXT,
-  zip INTEGER,
-  phone TEXT,
-  credit_card CHAR (16),
-  check_in DATE,
-  check_out DATE
+  fname TEXT NOT NULL,
+  lname TEXT NOT NULL,
+  email TEXT NOT NULL,
+  address TEXT NOT NULL,
+  city TEXT NOT NULL,
+  state TEXT NOT NULL,
+  zip INTEGER NOT NULL,
+  phone TEXT NOT NULL,
+  credit_card CHAR (16) NOT NULL,
+  check_in DATE NOT NULL,
+  check_out DATE NOT NULL
 );
 
 
 CREATE TABLE reservations(
   reservation_id SERIAL PRIMARY KEY,
   room_number INTEGER,
-  late_checkout CHAR(1),
+  late_checkout CHAR(1) ,
   guest_id INTEGER REFERENCES guests(guest_id)
 )

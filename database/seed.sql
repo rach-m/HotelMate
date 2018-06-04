@@ -1,4 +1,4 @@
--- \c hotelmate_db
+\c hotelmate_db
 
 DELETE FROM guests;
 

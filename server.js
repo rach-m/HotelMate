@@ -11,6 +11,7 @@ var moment = require("moment");
 const ejsLint = require('ejs-lint');
 
 
+
 // Allow override of HTTP methods based on the query string ?_method=DELETE
 app.use(methodOverride("_method"));
 
@@ -31,11 +32,10 @@ app.get("/", (request, response) => {
 
 app.get("/guests/new", (request, response) => {
   response.render("guests/new");
-
+});
 
 app.post("/guests/new", (request, response) => {
   console.log(request.body);
-  });
   const newGuest = {
     fname: request.body.fname,
     lname: request.body.lname,
@@ -72,32 +72,10 @@ app.get("/guests", (request, response) => {
   });
 });
 
-
-// app.get("/guests/search", (request, response) => {
-// let searchGuest = Guest.search(
-//   (lname = request.body.lname),
-//   (email = request.body.email)
-// );
-// let id = searchGuest.guest_id;
-//     response.render("guests/search", {id , searchGuest});
-//   // .then(Guest.search((lname = request.body.lname), (email = request.body.email)).then(
-//   //   guest => {Guest.find(id).then(response.redirect(302, "/guests/:id"));
-//   //   }
-// });
-
-// app.get('/guests/search', (request, response)=>{
-//   let searchGuest = Guest.search((lname = request.body.lname), (email = request.body.email))
-//   let id = searchGuest.guest_id;
-//   response.redirect(302, 'guest/:id');
-
-// });
-
-
 app.get("/guests/:id", (request, response) => {
   const id = request.params.id;
   let checkIn;
   let checkOut;
-
   Promise.all([Guest.find(id), Reservation.find(id)]).then(
     ([guest, reservation]) => {
       checkIn = moment(guest.check_in).format("MMM Do YYYY");
@@ -142,7 +120,7 @@ app.delete('/guests/:id', (request, response) => {
     ]).then(([guest, reservation]) => {
       response.redirect(302,"/guests");
     });
-});
+})
 
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
