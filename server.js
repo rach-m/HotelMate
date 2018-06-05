@@ -91,14 +91,7 @@ app.get("/guests/:id", (request, response) => {
   );
 });
 
-app.delete("/guests/:id", (request, response) => {
-  const id = Number(request.params.id);
-  Promise.all([Guest.delete(id), Reservation.delete(id)]).then(
-    ([guest, reservation]) => {
-      response.redirect(302, "/guests");
-    }
-  );
-});
+
 
 app.get("/guests/:id/edit", (request, response) => {
   const id = request.params.id;
@@ -127,6 +120,14 @@ app.put("/guests/:id/edit", (request, response) => {
 });
 });
 
+app.delete("/guests/:id", (request, response) => {
+  const id = Number(request.params.id);
+  Promise.all([Guest.delete(id), Reservation.delete(id)]).then(
+    ([guest, reservation]) => {
+      response.redirect(302, "/guests");
+    }
+  );
+});
 
 
 app.listen(PORT, () => {
