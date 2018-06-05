@@ -3,6 +3,7 @@
 Live Link: https://hotelmate.herokuapp.com/
 
 Technologies:
+<br>
 HTML
 <br>
 CSS
