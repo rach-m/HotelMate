@@ -49,14 +49,19 @@ app.post("/guests/new", (request, response) => {
     check_in: request.body.check_in,
     check_out: request.body.check_out
   };
+  console.log(newGuest.guest_id);
   newReservation = {
     room_number: request.body.room_number,
-    late_checkout: request.body.late_checkout
+    late_checkout: request.body.late_checkout,
   };
-  Guest.create(newGuest).then(
-    Reservation.create(newReservation).then(newGuest => {
-      response.redirect(302, "/guests");
-    })
+  Guest.create(newGuest)
+    .then((newGuest) => {
+      newReservation.guest_id = newGuest.guest_id;
+       Reservation.create(newReservation).then(newGuest => {
+         response.redirect(302, "/guests");
+       });
+  }
+
   );
 });
 
@@ -85,6 +90,16 @@ app.get("/guests/:id", (request, response) => {
     }
   );
 });
+
+app.delete("/guests/:id", (request, response) => {
+  const id = Number(request.params.id);
+  Promise.all([Guest.delete(id), Reservation.delete(id)]).then(
+    ([guest, reservation]) => {
+      response.redirect(302, "/guests");
+    }
+  );
+});
+
 app.get("/guests/:id/edit", (request, response) => {
   const id = request.params.id;
   let checkIn;
@@ -112,15 +127,7 @@ app.put("/guests/:id/edit", (request, response) => {
 });
 });
 
-app.delete('/guests/:id', (request, response) => {
-    const id = Number(request.params.id);
-    Promise.all([
-      Guest.delete(id),
-      Reservation.delete(id)
-    ]).then(([guest, reservation]) => {
-      response.redirect(302,"/guests");
-    });
-})
+
 
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);

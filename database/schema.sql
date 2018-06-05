@@ -14,7 +14,7 @@ CREATE TABLE guests (
   address TEXT NOT NULL,
   city TEXT NOT NULL,
   state TEXT NOT NULL,
-  zip INTEGER NOT NULL,
+  zip TEXT NOT NULL,
   phone TEXT NOT NULL,
   credit_card CHAR (16) NOT NULL,
   check_in DATE NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE guests (
 );
 
 
-CREATE TABLE reservations(
+CREATE TABLE reservations (
   reservation_id SERIAL PRIMARY KEY,
   room_number INTEGER,
   late_checkout CHAR(1) ,

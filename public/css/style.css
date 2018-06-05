@@ -9,7 +9,6 @@ body {
   background: whitesmoke;
   min-height: 100vh;
   flex: 1;
-  overflow: visible;
 }
 
 .nav-link {
@@ -67,10 +66,6 @@ a:hover {
   color: seagreen;
 }
 
-.guest-actions {
-  padding-bottom: 3%;
-  flex: 1 0 auto;
-}
 
 h1 {
   align-content: center;

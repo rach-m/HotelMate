@@ -1,5 +1,4 @@
 \c hotelmate_db
-
 DELETE FROM guests;
 
 INSERT INTO guests
@@ -59,23 +58,26 @@ TO_DATE
 );
 
 INSERT INTO reservations
-  (room_number, late_checkout)
+  (room_number, late_checkout, guest_id)
 VALUES
   (
     235,
-    'Y'
+    'Y',
+    '1'
 );
 INSERT INTO reservations
-  (room_number, late_checkout)
+  (room_number, late_checkout, guest_id)
 VALUES
   (
     345,
-    'Y'
+    'Y',
+    '2'
 );
 INSERT INTO reservations
-  (room_number, late_checkout)
+  (room_number, late_checkout, guest_id)
 VALUES
   (
     185,
-    'N'
+    'N',
+    '3'
 );
