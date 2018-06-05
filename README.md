@@ -16,5 +16,19 @@ I have always loved to travel so I wanted to create a CRUD app that reflected th
 
 Screenshots: 
 
+
+Create
 <img src = 'Screenshot/Screen Shot 2018-06-05 at 1.51.27 PM.png'>
+
+Read All
+<img src = 'Screenshot/Screen Shot 2018-06-05 at 1.50.47 PM.png'>
+
+Read One
+<img src = 'Screenshot/Screen Shot 2018-06-05 at 1.55.02 PM.png'>
+
+Update
+<img src = 'Screenshot/Screen Shot 2018-06-05 at 1.51.44 PM.png'>
+
+Delete
+<img src = 'Screenshot/Screen Shot 2018-06-05 at 1.51.57 PM.png'>
 
