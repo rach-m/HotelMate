@@ -1,4 +1,4 @@
-TAPESTRY
+<b>HotelMate<b>
 
 Live Link: https://hotelmate.herokuapp.com/
 
