@@ -4,11 +4,17 @@ Live Link: https://hotelmate.herokuapp.com/
 
 Technologies:
 HTML
+<br>
 CSS
+<br>
 Bootstrap
+<br>
 Express
+<br>
 EJS Templates
+<br>
 Node.Js
+<br>
 PSQL
 
 
